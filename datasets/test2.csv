@@ -1,0 +1,157 @@
+,node1,node2,tstart,tend
+7,Debden,Loughton,516,519
+8,East Acton,North Acton,516,518
+9,Loughton,Debden,516,518
+10,Theydon Bois,Epping,517,519
+11,North Acton,West Acton,518,520
+12,Loughton,Buckhurst Hill,519,521
+13,Debden,Theydon Bois,519,522
+14,Fairlop,Barkingside,520,521
+15,West Acton,Ealing Broadway,521,523
+16,Buckhurst Hill,Woodford,522,524
+17,Woodford,Buckhurst Hill,522,524
+18,Barkingside,Newbury Park,522,524
+19,Theydon Bois,Epping,522,524
+20,Loughton,Debden,522,524
+21,Newbury Park,Gants Hill,524,527
+22,Woodford,South Woodford,524,526
+23,Buckhurst Hill,Loughton,524,527
+24,Debden,Theydon Bois,525,528
+25,Epping,Theydon Bois,525,527
+26,White City,East Acton,526,528
+27,Ruislip Gardens,South Ruislip,526,527
+28,Grange Hill,Chigwell,526,528
+29,Gants Hill,Redbridge,527,528
+30,South Ruislip,Northolt,527,530
+31,Loughton,Debden,527,529
+32,South Woodford,Snaresbrook,527,529
+33,Theydon Bois,Epping,528,530
+34,Fairlop,Barkingside,528,529
+35,East Acton,North Acton,528,530
+36,Chigwell,Roding Valley,528,531
+37,Redbridge,Wanstead,529,531
+38,Ealing Broadway,West Acton,529,531
+39,Debden,Theydon Bois,529,532
+40,Northolt,Greenford,530,532
+41,Barkingside,Newbury Park,530,532
+42,North Acton,West Acton,530,532
+43,Wanstead,Leytonstone,531,534
+44,Roding Valley,Woodford,532,534
+45,Greenford,Perivale,532,534
+46,Newbury Park,Gants Hill,532,535
+47,Debden,Loughton,532,535
+48,Loughton,Debden,532,534
+49,Leytonstone,Leyton,532,534
+50,Woodford,Buckhurst Hill,533,535
+51,Epping,Theydon Bois,533,535
+52,Theydon Bois,Epping,533,535
+53,White City,Shepherd's Bush (Central),533,535
+54,West Acton,Ealing Broadway,533,535
+55,North Acton,East Acton,534,535
+56,Perivale,Hanger Lane,534,536
+57,Leyton,Stratford,534,536
+58,Woodford,South Woodford,534,536
+59,Gants Hill,Redbridge,535,536
+60,Debden,Theydon Bois,535,538
+61,Leytonstone,Leyton,535,537
+62,Loughton,Buckhurst Hill,535,537
+63,Buckhurst Hill,Loughton,535,538
+64,White City,East Acton,536,538
+65,Shepherd's Bush (Central),Holland Park,536,537
+66,South Woodford,Snaresbrook,536,538
+67,Hanger Lane,North Acton,537,540
+68,Leyton,Stratford,537,539
+69,Buckhurst Hill,Woodford,537,539
+70,Redbridge,Wanstead,537,539
+71,Holland Park,Notting Hill Gate,538,539
+72,Loughton,Debden,538,540
+73,Theydon Bois,Epping,538,540
+74,Fairlop,Barkingside,538,539
+75,East Acton,North Acton,538,540
+76,Snaresbrook,South Woodford,538,540
+77,White City,East Acton,539,541
+78,White City,Shepherd's Bush (Central),539,541
+79,Wanstead,Leytonstone,539,542
+80,Notting Hill Gate,Queensway,539,540
+81,Debden,Loughton,539,542
+82,Barkingside,Newbury Park,540,542
+83,Woodford,South Woodford,540,542
+84,South Woodford,Woodford,540,542
+85,North Acton,East Acton,540,541
+86,Mile End,Bethnal Green,540,542
+87,Epping,Theydon Bois,540,542
+88,North Acton,West Acton,540,542
+89,Ruislip Gardens,South Ruislip,540,541
+90,Ealing Broadway,West Acton,541,543
+91,Queensway,Lancaster Gate,541,542
+92,Debden,Theydon Bois,541,544
+93,South Woodford,Snaresbrook,542,544
+94,East Acton,North Acton,542,544
+95,Lancaster Gate,Marble Arch,542,544
+96,Newbury Park,Gants Hill,542,545
+97,Leytonstone,Leyton,542,544
+98,South Ruislip,Northolt,542,545
+99,Shepherd's Bush (Central),Holland Park,542,543
+100,Mile End,Bethnal Green,543,545
+101,Loughton,Buckhurst Hill,543,545
+102,West Acton,Ealing Broadway,543,545
+103,Bethnal Green,Liverpool Street,543,546
+104,Woodford,Buckhurst Hill,543,545
+105,Northolt,Greenford,544,546
+106,Holland Park,Notting Hill Gate,544,545
+107,Leyton,Stratford,544,546
+108,Buckhurst Hill,Loughton,545,548
+109,White City,Shepherd's Bush (Central),545,547
+110,Fairlop,Barkingside,545,546
+111,Gants Hill,Redbridge,545,546
+112,Notting Hill Gate,Queensway,545,546
+113,Buckhurst Hill,Woodford,545,547
+114,Marble Arch,Bond Street,545,546
+115,Ruislip Gardens,South Ruislip,546,547
+116,Debden,Loughton,546,549
+117,Redbridge,Wanstead,546,548
+118,Theydon Bois,Epping,546,548
+119,Liverpool Street,Bank,546,548
+120,Bethnal Green,Liverpool Street,546,549
+121,North Acton,East Acton,546,547
+122,Epping,Theydon Bois,547,549
+123,Leytonstone,Leyton,547,549
+124,Greenford,Perivale,547,549
+125,Barkingside,Newbury Park,547,549
+126,White City,East Acton,547,549
+127,Queensway,Lancaster Gate,547,548
+128,Woodford,Buckhurst Hill,548,550
+129,Lancaster Gate,Marble Arch,548,550
+130,Oxford Circus,Tottenham Court Road,548,549
+131,Loughton,Debden,548,550
+132,Wanstead,Leytonstone,548,551
+133,Woodford,South Woodford,548,550
+134,Shepherd's Bush (Central),Holland Park,548,549
+135,South Ruislip,Northolt,548,551
+136,Tottenham Court Road,Holborn,549,551
+137,Newbury Park,Gants Hill,549,552
+138,Perivale,Hanger Lane,549,551
+139,Loughton,Buckhurst Hill,549,551
+140,Grange Hill,Chigwell,549,551
+141,East Acton,North Acton,549,551
+142,Mile End,Bethnal Green,550,552
+143,Liverpool Street,Bank,550,552
+144,Buckhurst Hill,Loughton,550,553
+145,Debden,Theydon Bois,550,553
+146,South Woodford,Snaresbrook,550,552
+147,St. Paul's,Chancery Lane,550,552
+148,Holland Park,Notting Hill Gate,550,551
+149,Leyton,Stratford,550,552
+150,Ruislip Gardens,South Ruislip,551,552
+151,Northolt,Greenford,551,553
+152,White City,Shepherd's Bush (Central),551,553
+153,Notting Hill Gate,Queensway,551,552
+154,Chigwell,Roding Valley,551,554
+155,Holborn,Chancery Lane,551,552
+156,North Acton,East Acton,551,552
+157,Hanger Lane,North Acton,551,554
+158,North Acton,West Acton,551,553
+159,Marble Arch,Bond Street,551,552
+160,Chancery Lane,St. Paul's,552,553
+161,White City,East Acton,552,554
+162,Leytonstone,Leyton,552,554

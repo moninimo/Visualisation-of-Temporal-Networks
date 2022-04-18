@@ -1,0 +1,22 @@
+num,node1,node2,tstart,tend
+0,Harrow & Wealdstone,Kenton,852,854
+1,Kenton,South Kenton,852,856
+2,South Kenton,North Wembley,852,858
+3,North Wembley,Wembley Central,858,860
+4,Wembley Central,Stonebridge Park,860,862
+5,Stonebridge Park,Harlesden,863,865
+6,Harlesden,Willesden Junction,865,867
+7,Willesden Junction,Kensal Green,867,869
+8,Kensal Green,Queen's Park,870,873
+9,Queen's Park,Kilburn Park,874,875
+10,Kilburn Park,Maida Vale,876,877
+11,Maida Vale,Warwick Avenue,878,879
+12,Warwick Avenue,Paddington,879,880
+13,Paddington,Edgware Road (Bakerloo),881,882
+14,Edgware Road (Bakerloo),Marylebone,883,884
+15,Marylebone,Baker Street,884,885
+16,Baker Street,Regent's Park,886,887
+17,Regent's Park,Oxford Circus,887,889
+18,Oxford Circus,Piccadilly Circus,890,891
+19,Piccadilly Circus,Charing Cross,892,893
+20,Charing Cross,Embankment,893,894
