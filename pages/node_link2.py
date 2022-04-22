@@ -1,3 +1,5 @@
+# Import needed packages
+
 import io
 import base64
 import pathlib
@@ -8,12 +10,12 @@ import dash_cytoscape as cyto
 cyto.load_extra_layouts()
 
 import dash_bootstrap_components as dbc
-from xml.dom.minidom import Element
-from dash import Input, Output, State, dcc, html, dash_table, callback
+from dash import Input, Output, dcc, html, callback
 
 
 PATH = pathlib.Path(__file__).parent
 
+# A sidebar for upload data and chose layou
 sidebar = html.Div(
     [
         html.Label('Pleas upload the data :'),
@@ -33,9 +35,11 @@ sidebar = html.Div(
     ],
 )
 
+# Initial the edges and nodes
 edges = []
 nodes = []
 
+# Page layout
 layout = html.Div(
     [
         html.Hr(),
@@ -70,6 +74,7 @@ layout = html.Div(
     ]
 )
 
+# Process the uploaded file
 def parse_data(contents, filename):
     content_type, content_string = contents.split(',')
 
@@ -90,6 +95,7 @@ def parse_data(contents, filename):
 
     return df
 
+# Get the nodes and egdes
 def getelements(df):  
     cy_edges = []
     cy_nodes = []
@@ -117,7 +123,7 @@ def getelements(df):
     return cy_nodes+cy_edges
 
 
-
+# Store the uploaded data
 @callback(Output('store-data-nodelink2', 'data'),
             Input('upload-data-nodelink2', 'contents'),
             Input('upload-data-nodelink2', 'filename'))
@@ -125,7 +131,7 @@ def generateGraph(contents,filename):
     df = parse_data(contents,filename)   
     return df.to_dict('records')
 
-
+# Update graph when new value is chosen
 @callback( 
     Output('graph-nodelink2', 'elements'),
     Input('store-data-nodelink2', 'data'))
@@ -135,6 +141,7 @@ def update_figure(data):
     return elements
 
 
+# Update the layout
 @app.callback(Output('graph-nodelink2', 'layout'),
               Input('dropdown-update-layout', 'value'))
 def update_layout(layout):

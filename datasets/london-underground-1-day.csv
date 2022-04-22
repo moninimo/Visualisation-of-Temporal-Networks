@@ -1,4 +1,11 @@
 ,node1,node2,tstart,tend
+0,Loughton,Debden,509,510
+1,Debden,Theydon Bois,510,511
+2,Theydon Bois,Epping,511,512
+3,Epping,Theydon Bois,512,513
+4,Loughton,Debden,513,514
+5,Debden,Theydon Bois,514,515
+6,White City,East Acton,515,516
 7,Debden,Loughton,516,519
 8,East Acton,North Acton,516,518
 9,Loughton,Debden,516,518

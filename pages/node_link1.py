@@ -1,19 +1,20 @@
+# Import needed packages
+
 import io
 import base64
 import pathlib
 import pandas as pd
 from app import app
-
 import dash_cytoscape as cyto
 cyto.load_extra_layouts()
 
 import dash_bootstrap_components as dbc
-from xml.dom.minidom import Element
-from dash import Input, Output, State, dcc, html, dash_table, callback
+from dash import Input, Output,  dcc, html, callback
 
 
 PATH = pathlib.Path(__file__).parent
 
+# A sidebar for upload data and chose layout
 sidebar = html.Div(
     [
         html.Label('Pleas upload the data :'),
@@ -33,9 +34,11 @@ sidebar = html.Div(
     ],
 )
 
+# Initial the edges and nodes
 edges = []
 nodes = []
 
+# Page layout
 layout = html.Div(
     [
         html.Hr(),
@@ -71,6 +74,7 @@ layout = html.Div(
     ]
 )
 
+# Process the uploaded file
 def parse_data(contents, filename):
     content_type, content_string = contents.split(',')
 
@@ -91,6 +95,7 @@ def parse_data(contents, filename):
 
     return df
 
+# Get the nodes and egdes
 def getelements(df,num):  
     cy_edges = []
     cy_nodes = []
@@ -117,7 +122,7 @@ def getelements(df,num):
     return cy_nodes+cy_edges
 
 
-
+# Store the uploaded data
 @callback(Output('store-data-nodelink1', 'data'),
             Input('upload-data-nodelink1', 'contents'),
             Input('upload-data-nodelink1', 'filename'))
@@ -125,7 +130,7 @@ def generateGraph(contents,filename):
     df = parse_data(contents,filename)   
     return df.to_dict('records')
 
-
+# Update the slider's max and min value
 @callback(
             Output('timeSlider-nodelink1', 'min'),
             Output('timeSlider-nodelink1', 'max'),
@@ -134,6 +139,7 @@ def generateGraph(data):
     df = pd.DataFrame(data)
     return df.iloc[:,3].min(), df.iloc[:,4].max()
 
+# Update graph when new value is chosen
 @callback( 
     Output('graph-nodelink1', 'elements'),
     Input('timeSlider-nodelink1', 'value'),
@@ -143,7 +149,7 @@ def update_figure(selected_time,data):
     elements = getelements(df,int(selected_time))    
     return elements
 
-
+# Update the layout
 @app.callback(Output('graph-nodelink1', 'layout'),
               Input('dropdown-update-layout', 'value'))
 def update_layout(layout):

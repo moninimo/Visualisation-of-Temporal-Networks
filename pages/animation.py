@@ -1,18 +1,19 @@
-import io
+# Import needed packages
 
+import io
 import base64
 import pathlib
 import pandas as pd
 from app import app
 import dash_cytoscape as cyto
-cyto.load_extra_layouts()
-
 import dash_bootstrap_components as dbc
 from dash import Input, Output, State, dcc, html,callback
 
+cyto.load_extra_layouts()
 
 PATH = pathlib.Path(__file__).parent
 
+# A sidebar for upload data, play, and chose layout
 sidebar = html.Div(
     [
         html.Label('Pleas upload the data :'),
@@ -32,9 +33,11 @@ sidebar = html.Div(
     ],
 )
 
+# Initial the edges and nodes
 edges = []
 nodes = []
 
+# Page layout
 layout = html.Div(
     [
         html.Hr(),
@@ -80,6 +83,7 @@ layout = html.Div(
     ]
 )
 
+# Process the upload file
 def parse_data(contents, filename):
     content_type, content_string = contents.split(',')
 
@@ -100,6 +104,7 @@ def parse_data(contents, filename):
 
     return df
 
+# Get the nodes and egdes
 def getelements(df,num):  
     cy_edges = []
     cy_nodes = []
@@ -135,7 +140,7 @@ def generateGraph(contents,filename):
     return df.to_dict('records')
 
 
-
+# Update the slider's max and min value
 @callback(
             Output('timeSlider-animation', 'min'),
             Output('timeSlider-animation', 'max'),
@@ -144,7 +149,7 @@ def generateGraph(data):
     df = pd.DataFrame(data)
     return df.iloc[:,3].min(), df.iloc[:,4].max()
 
-
+# Update graph when new value is set
 @app.callback(
     Output("graph-animation", "elements"),
     Output("timeSlider-animation", "value"),
@@ -163,6 +168,7 @@ def update_figure(n, min,max,data,value):
     df = pd.DataFrame(data)
     return getelements(df,index),index
 
+# Start play when the button is clicked
 @app.callback(
     Output("animate", "disabled"),
     Input("play", "n_clicks"),
@@ -173,6 +179,7 @@ def toggle(n, playing):
         return not playing
     return playing
 
+# Change the layout
 @app.callback(Output('graph-animation', 'layout'),
               Input('dropdown-update-layout', 'value'))
 def update_layout(layout):

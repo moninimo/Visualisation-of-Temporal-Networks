@@ -1,19 +1,19 @@
-import base64
-from importlib.resources import contents
+# Import needed packages
+
+
 import io
-
+import base64
 import pathlib
-
 from app import app
 import pandas as pd
-import dash_cytoscape as cyto
 import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
-from dash import Input, Output, State, dcc, html, dash_table, callback
+from dash import Input, Output, dcc, html, callback
 
 
 PATH = pathlib.Path(__file__).parent
 
+# A sidebar for upload data and chose layou
 sidebar = html.Div(
     [
         html.Label('Pleas upload the data :'),
@@ -22,9 +22,10 @@ sidebar = html.Div(
     ],
 )
 
-
+# Initial the graph
 fig = go.Figure()
 
+# Page layout
 layout = dbc.Container(
     [
         html.Hr(),
@@ -38,6 +39,7 @@ layout = dbc.Container(
     fluid=True,
 )
 
+# Process the data
 def parse_data(contents, filename):
     content_type, content_string = contents.split(',')
 
@@ -58,6 +60,7 @@ def parse_data(contents, filename):
 
     return df
 
+# Store the uploaded file
 @callback(Output('store-data-jutaposed', 'data'),
             Input('upload-data-jutaposed', 'contents'),
             Input('upload-data-jutaposed', 'filename'))
@@ -65,7 +68,7 @@ def generateGraph(contents,filename):
     df = parse_data(contents,filename)   
     return df.to_dict('records')
 
-
+# Upload the graph after data is uploaded
 @callback(
     Output('juxtaposed-graph','figure'),
     Input('store-data-jutaposed', 'data'))
