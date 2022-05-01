@@ -17,7 +17,7 @@ from pages import Homepage,node_link1,node_link2,animation,juxtaposed
 
 app_name = os.getenv("DASH_APP_PATH", "/Homepage")
 
-# The navtion bar
+# The navigation bar
 nav = dbc.NavbarSimple(
     children=[
         dbc.NavItem(dbc.NavLink("Home Page", href="/Homepage")),
@@ -25,6 +25,8 @@ nav = dbc.NavbarSimple(
         dbc.NavItem(dbc.NavLink("Node Link 2", href="/node_link2")),
         dbc.NavItem(dbc.NavLink("Animation", href="/animation")),
         dbc.NavItem(dbc.NavLink("Juxtaposed", href="/juxtaposed")),
+        # Un comment the following line if you need an extra page.
+        # dbc.NavItem(dbc.NavLink("New Page", href="/name-of-newpage")),
     ],
     brand_href="#",
     dark= True,
@@ -59,6 +61,9 @@ def display_page(pathname):
         return animation.layout
     elif pathname == '/juxtaposed':
         return juxtaposed.layout
+    # Un comment if you need another page
+    # elif pathname == '/name-of-newpage':
+    #     return name-of-newpage.layout
     else:
         return Homepage.layout
     

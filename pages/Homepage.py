@@ -68,13 +68,20 @@ layout = dbc.Container([
     ]), 
     
     html.Br(),
+    html.H6('Data format requirment:'),
     html.P('You can upload your own data to perform the visualization and get instant react graphs. ' ),
     dbc.Alert('Please note: the data format must be as follwing ', color="light"),
     dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True),
     html.P('Some example datasets are also aviable on Github, if needed.'), 
-    
-    html.Br(),
-    html.Br(),
     html.P('The source code are aviable on :'), 
     dcc.Link(href='https://github.com/moninimo/Visualisation-of-Temporal-Networks'),
+    html.Br(),
+    html.Br(),
+    html.H6('Ethical consideration:'),
+    html.P('This website won\'t save any uploaded data. '), 
+    html.P('The data are temporally stored, will be deleted immedilty after close the website.'),
+    html.P('It\'s the your duty to make sure the uploaded data meets the ethical requirement. ')
     ])
+
+
+
